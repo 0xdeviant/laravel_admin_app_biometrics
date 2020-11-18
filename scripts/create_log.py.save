@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+import mysql.connector as mysql
+
+def connect():
+	user = "bio"
+	password = "password1"
+	host = "127.0.0.1"
+	database = "biometrics"  
+
+	conn = mysql.connect(user=user, password=password, host=host, database=database)
+
+	if conn:
+		conn.cursor("
+		print('Connected!')
+		
+		conn.close()
+		
+		return
+	
+	print('Failed')
+
+
+if __name__ == '__main__':
+	connect()
+	
+	

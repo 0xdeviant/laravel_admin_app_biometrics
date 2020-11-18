@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nano -T 4 control.py
