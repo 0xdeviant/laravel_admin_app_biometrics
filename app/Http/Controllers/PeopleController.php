@@ -40,7 +40,7 @@ class PeopleController extends Controller
         $person->save();
 
         // send to serial communication
-        $command = escapeshellcmd('sudo python /home/pi/Downloads/ProjectTwo/scripts/control.py 2'.$id);
+        $command = escapeshellcmd('python /home/pi/Downloads/ProjectTwo/scripts/control.py 2'.$id);
         $output = shell_exec($command);
 
         // Paginate result
